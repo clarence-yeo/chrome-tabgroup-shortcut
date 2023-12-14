@@ -1,0 +1,43 @@
+{
+    "manifest_version": 3,
+    "name": "Tab Group Toggle focus 1",
+    "version": "1.0",
+    "description": "Toggle Chrome tab groups with a shortcut key.",
+    "permissions": ["tabs", "activeTab", "storage", "tabGroups"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "commands": {
+      "toggle-tab-group-1": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+1"
+        },
+        "description": "Toggle Tab Group 1"
+      },
+      "toggle-tab-group-2": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+2"
+        },
+        "description": "Toggle Tab Group 2"
+      },
+      "toggle-tab-group-3": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+3"
+        },
+        "description": "Toggle Tab Group 3"
+      },
+      "toggle-tab-group-4": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+4"
+        },
+        "description": "Toggle Tab Group 4"
+      }
+    }
+  }
+  
